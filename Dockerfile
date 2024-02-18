@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER yivanus yivanus@gmail.com 
+MAINTAINER sddzcuigc sddzcuigc@hotmail.com
 RUN mkdir -p /var/mindx/meteor && chmod 777 /var/mindx/meteor 
 RUN apt-get update && apt-get install -y git 
 ENV HOME /var/mindx/meteor
@@ -8,7 +8,7 @@ RUN useradd mindx
 USER mindx
 RUN curl https://install.meteor.com | sh
 WORKDIR /var/mindx/meteor
-RUN git clone https://github.com/yivanus/kityminder-meteor.git
+RUN git clone https://github.com/sddzcuigc/kityminder-meteor.git
 ENV PATH $PATH:$HOME/.meteor
 RUN meteor create --bare /var/mindx/meteor/kityminder-meteor-demo
 WORKDIR /var/mindx/meteor/kityminder-meteor-demo/
